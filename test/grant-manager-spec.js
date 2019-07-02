@@ -78,7 +78,7 @@ const manager = getManager('./test/fixtures/auth-utils/keycloak-confidential.jso
 test('GrantManager in confidential mode should be able to get userinfo', (t) => {
   manager.obtainDirectly('test-user', 'tiger')
     .then((grant) => manager.userInfo(grant.access_token))
-    .then((user) => t.equal(user.preferred_username, 'test-user'))
+    .then((user) => t.equal(user.preferred_username, 'test-sdfsdfdsfuser'))
     .then(t.end);
 });
 
